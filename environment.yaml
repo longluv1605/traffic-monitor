@@ -1,0 +1,22 @@
+name: traffic-monitoring
+channels:
+  - nvidia
+  - pytorch
+  - anaconda
+  - defaults
+dependencies:
+  - python=3.12
+  - cudatoolkit
+  - pytorch-cuda
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pip
+  - pip:
+      - ultralytics
+      - deep_sort_realtime
+      - opencv-python
+      - scikit-learn
+      - pyyaml
+      - roboflow
+      - python-dotenv

@@ -1,0 +1,27 @@
+# Configuration for ORBRO AI Developer Test - Traffic Monitoring Pipeline
+
+# Roboflow datasets
+roboflow:
+  model_format: "yolov8"
+  workspace: "fsmvu"
+  project: "street-view-gdogo"
+  version: 3
+  location: "tests"
+
+# Fine-tune settings
+finetune:
+  data_yaml: "datasets/data.yaml"  # Path to dataset YAML file
+  imgsz: 640                      # Image size for training
+  batch_size: 32                  # Batch size for training
+  device: 0                       # 0: gpu, -1: cpu
+  epochs: 10                      # Number of training epochs
+
+# Traffic monitor settings
+traffic_monitor:
+  video_path: "videos/Road_1.mp4" # Path to input video
+  model_path: "runs/train/traffic_monitoring/weights/best.pt"  # Path to YOLO model
+  device: 'cuda:0'                       # cpu, cuda:0
+  log_file: "traffic_log.txt"     # Path to log file
+  conf_threshold: 0.5             # Confidence threshold for detection
+  imgsz: 640                      # Image size for inference
+  wrong_way_threshold: 10         # Frames to detect wrong way
