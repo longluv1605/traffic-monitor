@@ -3,3 +3,4 @@ videos/
 behaviors.csv
 traffic_log.txt
 EVALUATION.md
+.env
