@@ -1,4 +1,4 @@
-# ORBRO AI Developer Test - Option 1: Phân tích CCTV giao thông
+# Phân tích CCTV giao thông
 
 ## Tác giả
 
