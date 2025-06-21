@@ -1,15 +1,13 @@
 # ORBRO AI Developer Test - Option 1: Phân tích CCTV giao thông
 
-## Thí sinh
+## Tác giả
 
 - Họ tên: Phạm Thành Long
 - Email: [longtrong53@gmail.com](mailto:longtrong53@gmail.com)
 
-## Nội dung thực hiện
+## Tóm tắt
 
-### Bài 1. Traffic Monitoring
-
-#### Mô tả
+### Mô tả
 
 Dự án này triển khai hệ thống phân tích video CCTV giao thông, đáp ứng yêu cầu của bài test ORBRO AI Developer (Option 1). Hệ thống được chia thành hai module:
 
@@ -19,16 +17,16 @@ Dự án này triển khai hệ thống phân tích video CCTV giao thông, đá
 
 Code được viết bằng Python, tuân theo chuẩn **PEP8**, sử dụng YOLOv8 cho object detection, DeepSORT cho tracking, và tự động gán màu khác nhau cho từng lớp phương tiện để dễ phân biệt. Kết quả được lưu dưới dạng file CSV (hành vi) và TXT (log hiệu suất).
 
-#### Tính năng
+### Tính năng
 
-##### Fine-tune (`finetune.py`)
+#### Fine-tune (`finetune.py`)
 
 - Fine-tune YOLOv8 trên dataset giao thông.
 - Phát hiện 6 lớp: `Bicycle`, `Bus`, `Car`, `Motorbike`, `Person`, `Truck`.
 - Đánh giá metrics: mAP@0.5, mAP@0.5:0.95, Precision, Recall.
 - Lưu mô hình tại: `runs/train/vehicle_detection/weights/best.pt`.
 
-##### Traffic Monitor (`traffic_monitor.py`)
+#### Traffic Monitor (`traffic_monitor.py`)
 
 - **Phát hiện phương tiện**: Sử dụng YOLOv8 để phát hiện và phân loại phương tiện.
 - **Đếm số lượng từng lớp**: Thống kê số lượng riêng cho mỗi lớp (`Bus`, `Car`, v.v.).
@@ -40,16 +38,6 @@ Code được viết bằng Python, tuân theo chuẩn **PEP8**, sử dụng YOL
 - `behaviors.csv`: Hành vi (`Track ID`, `Behavior`, `Frame`).
 - `traffic_log.txt`: Log hiệu suất (Frame, FPS, Latency, số lượng từng lớp).
 - Metrics trung bình: FPS, latency, số lượng từng lớp (in ra console).
-
-### Bài 2: Tự đánh giá
-
-#### Mục tiêu
-
-Tự đánh giá về các vấn đề chưa thực hiện hoặc chưa hoàn thiện.
-
-#### Tài liệu trình bày
-
-File `EVALUATION.md` trong thư mục `source_code/`.
 
 ## Cấu trúc thư mục
 
