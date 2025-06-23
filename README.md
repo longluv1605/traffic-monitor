@@ -9,7 +9,7 @@
 
 ### Mô tả
 
-Dự án này triển khai hệ thống phân tích video CCTV giao thông, đáp ứng yêu cầu của bài test ORBRO AI Developer (Option 1). Hệ thống được chia thành hai module:
+Dự án này triển khai hệ thống phân tích video CCTV giao thông, đáp ứng yêu cầu của ORBRO AI. Hệ thống được chia thành hai module:
 
 - **`finetune.py`**: Fine-tune mô hình YOLOv8 trên dataset giao thông để phát hiện 6 lớp (`Bicycle`, `Bus`, `Car`, `Motorbike`, `Person`, `Truck`).
 
